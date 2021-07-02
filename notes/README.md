@@ -1,25 +1,37 @@
 ---
-date: 2021-5-9
+date: 2021-6-29
 categories: Daily_Life
 tags:
-  - ADB调试
-  - 踩坑
+  - Ubuntu
+  - QQ
 comments: true
-title: 使用PC同步播放移动设备的音频
-abbrlink: 8caf
+title: 借助VSCode在Ubuntu上使用QQ
 ---
 
-当你使用台式机工作时，你是否喜欢在旁边放一个pad或手机刷其他视频或音乐？并且在没有条件外放声音的情况下，你是否尝试过带两个耳机来收听两个设备的音频（电脑+移动设备）？如果你想这么干，又苦于没有头绪，那么本文将告诉你各种可能的方案以及他们是否可行，当然最后你会得到堪称完美的整合方式。
 
-与此问题的相关英文问法通常是：
 
-**How to stream audio from an Android device to a Windows PC ??**
 
-#### **为什么要这样做**
+<fancybox>
+<img src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/ubuntu/2021-07-02_23-59.png"/>
+</fancybox>
+
+更新于2021年6月。Ubuntu上使用QQ一直是个痛点，而且令人不解的是腾讯除了在19年把远古版本LinuxQQ拿出来修补一下之外，没有任何迹象表明其会推出官方的Linux新版QQ,所以通常Linux之上使用QQ就几个方式：① Wine版QQ，② 通过协议自定义封装的仿QQ的IM工具。本文使用的就是后者，而且作者借助Vscode以插件形式运行。
+
+直接上地址： https://github.com/takayama-lily/vscode-qq
+
+<!--more-->
+
+**此项目非常新鲜，三个月前才被创建，目前使用上发送信息有些小bug，但可以稳定的接受个人和群聊消息。**
+
+#### **为什么不用Wine版QQ**
 
 请首先明确我的使用场景：
 
-![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/20210510032841.png)
+<fancybox>
+<img src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/ubuntu/2021-07-02_23-55.png"/>
+</fancybox>
+
+
 
 可以看到，平板在我的桌面相当于一块小副屏，当然它并不能和PC直接互通，我们知道，华为的手机和平板、电脑之间可以多屏协作，即将手机画面和声音以有线或无线方式投送到平板、电脑之上，以达到在电脑上处理手机事务的能力，**但遗憾的是：目前华为平板和电脑之间并没有多屏协作的官方方案！**也就是说，对于平板来说，在华为设计思路里，并不是从属设备而是替代PC的主力设备，这和iPad的发展类似，当然它发展它的，我们个人的需求仍然要满足滴！
 
@@ -90,3 +102,6 @@ abbrlink: 8caf
 值得一提的是，该方案并不影响平板的原有音频输出！同时也不影响电脑的音频输出。
 
 
+<fancybox>
+<img src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/ubuntu/2021-07-02_15-57.png"/>
+</fancybox>
