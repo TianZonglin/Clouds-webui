@@ -1,4 +1,4 @@
 git add -A
-git commit -m"%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%"
+git commit -m $(date "+%Y-%m-%d-%H-%M-%S-byUbuntu")
 git push -u origin master -f
 
