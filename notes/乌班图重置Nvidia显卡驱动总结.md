@@ -49,6 +49,10 @@ sudo apt-get --purge remove "*nvidia*"  //有点重复，不影响
 - 再次，手动关闭桌面显示。`service lightdm stop` 或者 `service gdm stop`，停用桌面服务。（注意：此时要 Ctrl+Alt+F3 进入tty来执行后续操作及安装过程）
 - 最后，验证的方法就是 `lsmod | grep nouveau` 没有任何输出！
 
+### BIOS禁用 SecureBoot
+
+NVIDIA 由于由于Ubuntu的内核编译默认设置了 CONFIG_MODULE_SIG 为真，在支持UEFI的设备上打开Secure Boot 后，Ubuntu对于添加到内核的模块更加保守, 需要持有签名才能添加到模块中。这里我们直接进入BIOS关闭 SecureBoot 即可。
+
 ### Cuda绑定安装显卡驱动
 
 对于执行 Cuda 绑定的驱动程序来说，无需附加诸如 `-no-x-check` 之类的参数，这些参数只有在直接通过 Nvidia 驱动安装程序安装时才可以追加。我们这里是 Cuda 的安装中附带安装 Nvidia 驱动！
